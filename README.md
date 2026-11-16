@@ -6,6 +6,8 @@ It builds on [Quantum circuit compilation with historical calibration data (arXi
 
 Author: Ruchi Thareja
 
+## Summary : Calibration data is stale by the time your job runs. A short weighted history predicts tomorrow’s errors 20–27% better and avoids bad placements on volatile machines.
+
 ## Main findings
 
 Three 156-qubit IBM Heron machines (`ibm_fez`, `ibm_kingston`, `ibm_marrakesh`), about one year of daily calibrations each (Oct 2025 – Oct 2026). All results are on a held-out test period (the second half of the year).
@@ -18,6 +20,9 @@ Three 156-qubit IBM Heron machines (`ibm_fez`, `ibm_kingston`, `ibm_marrakesh`),
 6. **Little data is needed.** Two weeks of history is enough to tune the predictor, and settings transfer between machines.
 
 Supporting facts from the data: error spikes usually last one calibration; about 70% of rises revert while about 60% of drops persist; a link in today's top 20% is still there 55% of the time tomorrow and 45–50% three months later.
+
+<img width="1560" height="1170" alt="ibm_marrakesh_drift" src="https://github.com/user-attachments/assets/0a884385-9d2a-4577-bfe8-5f5c591d1b9f" />
+
 
 ## Repository layout
 
