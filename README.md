@@ -1,12 +1,12 @@
 # Forecasting 2Q gate errors for noise-aware compilation on IBM Heron
 
+**In short:** calibration data is stale by the time your job runs. A short, recency-weighted history predicts tomorrow's gate errors 20–27% better than the latest calibration and avoids bad placements on volatile machines.
+
 Noise-aware compilers place circuits on the qubits and links with the lowest error, using the vendor's calibration data. By the time a job runs, the latest calibration (lcd) can be hours old, and it is noisy. This project asks: **does a short, recency-weighted history of calibrations predict tomorrow's errors better than the latest calibration alone, and does that give better circuits?**
 
 It builds on [Quantum circuit compilation with historical calibration data (arXiv:2407.21462)](https://arxiv.org/abs/2407.21462), which compared the latest calibration with long averages and 15-day windows on two older IBM devices over 7–14 days.
 
 Author: Ruchi Thareja
-
-## Summary : Calibration data is stale by the time your job runs. A short weighted history predicts tomorrow’s errors 20–27% better and avoids bad placements on volatile machines.
 
 ## Main findings
 
@@ -21,7 +21,8 @@ Three 156-qubit IBM Heron machines (`ibm_fez`, `ibm_kingston`, `ibm_marrakesh`),
 
 Supporting facts from the data: error spikes usually last one calibration; about 70% of rises revert while about 60% of drops persist; a link in today's top 20% is still there 55% of the time tomorrow and 45–50% three months later.
 
-<img width="1560" height="1170" alt="ibm_marrakesh_drift" src="https://github.com/user-attachments/assets/0a884385-9d2a-4577-bfe8-5f5c591d1b9f" />
+   ![2Q gate error drift on ibm_marrakesh](figures/ibm_marrakesh_drift.png)
+   *Daily 2Q gate error drift on ibm_marrakesh, the most volatile of the three machines.*
 
 
 ## Repository layout
