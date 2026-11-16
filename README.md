@@ -4,7 +4,7 @@ Noise-aware compilers place circuits on the qubits and links with the lowest err
 
 It builds on [Quantum circuit compilation with historical calibration data (arXiv:2407.21462)](https://arxiv.org/abs/2407.21462), which compared the latest calibration with long averages and 15-day windows on two older IBM devices over 7–14 days.
 
-Authors: Ruchi Thareja
+Author: Ruchi Thareja
 
 ## Main findings
 
