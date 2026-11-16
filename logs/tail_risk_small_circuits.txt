@@ -1,0 +1,49 @@
+tail_risk.py output, small circuits (full closed-loop run, test period from Apr 2026)
+
+===== ibm_fez =====  2700 runs, circuits: adder4, bv12, bv4, bv8, ghz12, ghz4, ghz8, qft4, qft6, qft8
+ delay_h method  mean_regret_%  P(loss>2%)  P(loss>5%)  worst5%_%
+       0    lcd         -0.937       0.116       0.036     -3.928
+       0    w10         -0.960       0.103       0.039     -4.153
+       0   asym         -0.719       0.072       0.028     -2.949
+       6    lcd         -0.890       0.113       0.032     -3.665
+       6    w10         -0.708       0.089       0.030     -3.426
+       6   asym         -0.725       0.093       0.032     -3.601
+      12    lcd         -1.064       0.113       0.042     -4.130
+      12    w10         -0.780       0.093       0.038     -4.005
+      12   asym         -0.785       0.092       0.032     -3.665
+  head to head (share of runs more than 2% worse than the other, 95% CI over days):
+    delay    0 h: asym worse than lcd 6.4% [4.1%, 9.2%]   lcd worse than asym 10.7% [7.9%, 13.8%]
+    delay    6 h: asym worse than lcd 8.1% [5.6%, 11.0%]   lcd worse than asym 9.9% [7.0%, 13.0%]
+    delay   12 h: asym worse than lcd 7.7% [5.1%, 10.7%]   lcd worse than asym 9.8% [7.3%, 12.3%]
+
+===== ibm_kingston =====  2790 runs, circuits: adder4, bv12, bv4, bv8, ghz12, ghz4, ghz8, qft4, qft6, qft8
+ delay_h method  mean_regret_%  P(loss>2%)  P(loss>5%)  worst5%_%
+       0    lcd         -1.200       0.118       0.044     -4.507
+       0    w10         -0.950       0.102       0.044     -4.143
+       0   asym         -0.926       0.108       0.045     -4.261
+       6    lcd         -1.263       0.126       0.057     -5.303
+       6    w10         -1.022       0.123       0.057     -6.092
+       6   asym         -0.858       0.099       0.048     -4.389
+      12    lcd         -0.931       0.111       0.042     -4.130
+      12    w10         -1.049       0.115       0.054     -5.823
+      12   asym         -0.970       0.111       0.049     -4.544
+  head to head (share of runs more than 2% worse than the other, 95% CI over days):
+    delay    0 h: asym worse than lcd 9.4% [7.2%, 11.8%]   lcd worse than asym 10.6% [8.0%, 13.3%]
+    delay    6 h: asym worse than lcd 8.7% [6.5%, 11.3%]   lcd worse than asym 11.5% [9.0%, 14.1%]
+    delay   12 h: asym worse than lcd 9.6% [7.1%, 12.2%]   lcd worse than asym 9.7% [7.6%, 11.7%]
+
+===== ibm_marrakesh =====  2790 runs, circuits: adder4, bv12, bv4, bv8, ghz12, ghz4, ghz8, qft4, qft6, qft8
+ delay_h method  mean_regret_%  P(loss>2%)  P(loss>5%)  worst5%_%
+       0    lcd         -2.253       0.237       0.111    -10.376
+       0    w10         -1.328       0.118       0.052     -5.799
+       0   asym         -1.078       0.112       0.056     -5.983
+       6    lcd         -1.994       0.218       0.102     -9.863
+       6    w10         -1.558       0.128       0.068     -7.048
+       6   asym         -1.411       0.127       0.069     -7.364
+      12    lcd         -2.352       0.218       0.112    -10.872
+      12    w10         -1.529       0.123       0.069     -7.091
+      12   asym         -1.181       0.114       0.055     -5.929
+  head to head (share of runs more than 2% worse than the other, 95% CI over days):
+    delay    0 h: asym worse than lcd 8.7% [6.3%, 11.3%]   lcd worse than asym 21.4% [17.7%, 25.2%]
+    delay    6 h: asym worse than lcd 10.5% [8.1%, 13.1%]   lcd worse than asym 20.0% [16.5%, 23.9%]
+    delay   12 h: asym worse than lcd 9.4% [7.0%, 11.7%]   lcd worse than asym 18.9% [15.7%, 22.5%]

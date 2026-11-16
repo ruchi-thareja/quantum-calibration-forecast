@@ -1,0 +1,74 @@
+
+===== ibm_fez =====  176 links, 310 days
+  still top-20% after k days: 1d 55%, 2d 54%, 3d 53%, 5d 53%, 7d 51%, 14d 51%, 30d 50%, 60d 49%, 90d 49%   (chance = 20%)
+  links top on > 80% of days (core): 2  -> they fill 5% of a typical day's top-20% set
+  links never top: 19%, top on < 10% of days: 55%
+  links top on 10-80% of days (sometimes good): 44%
+
+===== ibm_kingston =====  172 links, 298 days
+  still top-20% after k days: 1d 55%, 2d 54%, 3d 53%, 5d 53%, 7d 52%, 14d 50%, 30d 48%, 60d 46%, 90d 45%   (chance = 20%)
+  links top on > 80% of days (core): 1  -> they fill 2% of a typical day's top-20% set
+  links never top: 17%, top on < 10% of days: 54%
+  links top on 10-80% of days (sometimes good): 45%
+
+===== ibm_marrakesh =====  175 links, 311 days
+  still top-20% after k days: 1d 55%, 2d 54%, 3d 54%, 5d 53%, 7d 53%, 14d 53%, 30d 51%, 60d 50%, 90d 50%   (chance = 20%)
+  links top on > 80% of days (core): 5  -> they fill 13% of a typical day's top-20% set
+  links never top: 17%, top on < 10% of days: 51%
+  links top on 10-80% of days (sometimes good): 46%
+
+Saved plots/top20_stability.png
+
+===== ibm_fez =====
+Part 1: compiling D hours before the job runs
+         mae_lcd  mae_w10  mae_asym  spearman_lcd  spearman_w10  spearman_asym  top20_lcd  top20_w10  top20_asym      n
+delay_h                                                                                                                
+0          0.119    0.090     0.089         0.647         0.760          0.765      0.563      0.487       0.493  90375
+6          0.115    0.090     0.089         0.659         0.759          0.762      0.445      0.474       0.479  90375
+12         0.114    0.090     0.089         0.663         0.759          0.763      0.429      0.472       0.477  90374
+24         0.111    0.090     0.090         0.673         0.759          0.762      0.443      0.473       0.477  90374
+48         0.116    0.092     0.091         0.657         0.754          0.757      0.432      0.471       0.473  90040
+Part 2: no delay, split by time since the link's previous measurement
+         mae_lcd  mae_w10  mae_asym  spearman_lcd  spearman_w10  spearman_asym  top20_lcd  top20_w10  top20_asym      n
+gap                                                                                                                    
+< 12 h     0.117    0.094     0.099         0.662         0.754          0.729      0.529      0.584       0.567  38270
+12-36 h    0.119    0.087     0.081         0.644         0.766          0.792      0.513      0.600       0.631  47239
+> 36 h     0.135    0.094     0.090         0.604         0.737          0.761      0.487      0.584       0.608   4866
+  share of predictions per gap: < 12 h 42%, 12-36 h 52%, > 36 h 5%
+  (top-20% / Spearman need >= 20 links on a day within a group; NaN = too few)
+
+===== ibm_kingston =====
+Part 1: compiling D hours before the job runs
+         mae_lcd  mae_w10  mae_asym  spearman_lcd  spearman_w10  spearman_asym  top20_lcd  top20_w10  top20_asym      n
+delay_h                                                                                                                
+0          0.130    0.108     0.106         0.686         0.769          0.773      0.559      0.491       0.501  78205
+6          0.127    0.109     0.106         0.695         0.768          0.771      0.452      0.477       0.483  78204
+12         0.127    0.109     0.107         0.693         0.768          0.770      0.440      0.476       0.481  78192
+24         0.124    0.109     0.107         0.701         0.767          0.770      0.454      0.477       0.481  78192
+48         0.131    0.112     0.109         0.684         0.759          0.764      0.435      0.472       0.475  77872
+Part 2: no delay, split by time since the link's previous measurement
+         mae_lcd  mae_w10  mae_asym  spearman_lcd  spearman_w10  spearman_asym  top20_lcd  top20_w10  top20_asym      n
+gap                                                                                                                    
+< 12 h     0.124    0.107     0.108         0.703         0.764          0.755      0.560      0.586       0.587  32228
+12-36 h    0.129    0.105     0.100         0.701         0.793          0.808      0.551      0.613       0.633  38672
+> 36 h     0.165    0.133     0.125         0.627         0.725          0.740      0.468      0.566       0.579   7305
+  share of predictions per gap: < 12 h 41%, 12-36 h 49%, > 36 h 9%
+  (top-20% / Spearman need >= 20 links on a day within a group; NaN = too few)
+
+===== ibm_marrakesh =====
+Part 1: compiling D hours before the job runs
+         mae_lcd  mae_w10  mae_asym  spearman_lcd  spearman_w10  spearman_asym  top20_lcd  top20_w10  top20_asym      n
+delay_h                                                                                                                
+0          0.160    0.120     0.119         0.609         0.739          0.737      0.554      0.495       0.499  84830
+6          0.156    0.121     0.120         0.622         0.737          0.735      0.433      0.484       0.486  84683
+12         0.156    0.121     0.120         0.626         0.738          0.735      0.425      0.483       0.485  84683
+24         0.151    0.121     0.120         0.638         0.738          0.735      0.435      0.484       0.486  84675
+48         0.155    0.122     0.121         0.628         0.733          0.730      0.430      0.480       0.483  84387
+Part 2: no delay, split by time since the link's previous measurement
+         mae_lcd  mae_w10  mae_asym  spearman_lcd  spearman_w10  spearman_asym  top20_lcd  top20_w10  top20_asym      n
+gap                                                                                                                    
+< 12 h     0.158    0.126     0.133         0.619         0.741          0.701      0.553      0.611       0.605  34220
+12-36 h    0.158    0.114     0.109         0.612         0.740          0.763      0.530      0.622       0.638  45016
+> 36 h     0.180    0.132     0.125         0.578         0.706          0.741      0.539      0.616       0.632   5594
+  share of predictions per gap: < 12 h 40%, 12-36 h 53%, > 36 h 7%
+  (top-20% / Spearman need >= 20 links on a day within a group; NaN = too few)
